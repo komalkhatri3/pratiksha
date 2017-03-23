@@ -18,15 +18,7 @@ public class firstpage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstpage);
 
-        Button button=(Button) findViewById(R.id.button5);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(firstpage.this,login.class);
-                startActivity(i);
 
-            }
-        });
 
     }
 
@@ -35,6 +27,29 @@ public class firstpage extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_firstpage, menu);
         return true;
+    }
+    public void change_activity(View view)
+    {
+        if(view== findViewById(R.id.button))
+        {
+            Intent i=new Intent(firstpage.this,Listofhospitals.class);
+            startActivity(i);
+        }
+        if(view== findViewById(R.id.button2))
+        {
+            Intent i=new Intent(firstpage.this,book_ambulance.class);
+            startActivity(i);
+        }
+        if(view== findViewById(R.id.button3))
+        {
+            Intent i=new Intent(firstpage.this,Otherservices.class);
+            startActivity(i);
+        }
+        if(view== findViewById(R.id.button5))
+        {
+            Intent i=new Intent(firstpage.this,login.class);
+            startActivity(i);
+        }
     }
 
     @Override

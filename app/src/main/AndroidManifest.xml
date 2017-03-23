@@ -22,6 +22,18 @@
         <activity
             android:name=".login"
             android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Listofhospitals"
+            android:label="@string/title_activity_listofhospitals"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".book_ambulance"
+            android:label="@string/title_activity_book_ambulance"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Otherservices"
+            android:label="@string/title_activity_otherservices"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
