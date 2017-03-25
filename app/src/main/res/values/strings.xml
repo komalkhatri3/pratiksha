@@ -10,4 +10,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_book_ambulance">book_ambulance</string>
     <string name="title_activity_otherservices">Otherservices</string>
+    <string name="title_activity_near_by_hospitals">Map</string>
+    <string name="title_activity_ambulance__hospital">Ambulance_Hospital</string>
+    <string-array name="state_name">
+
+        <item>Arunachal Pradesh.</item>
+        <item>Assam</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Sikkim</item>
+        <item>Tripura</item>
+    </string-array>
 </resources>
