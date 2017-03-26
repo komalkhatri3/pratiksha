@@ -1,13 +1,16 @@
 package com.harsh.nandy.cancerantidote;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class login extends AppCompatActivity {
+public class login extends AppCompatActivity implements SignUpFragment.OnSignUpFragmentInteractionListener {
+
+    FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +19,29 @@ public class login extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fragmentManager = getSupportFragmentManager();
+
+        AppCompatButton signUpButton = (AppCompatButton) findViewById(R.id.button_signup);
+        signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                SignUpFragment signUpFragment = new SignUpFragment();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
+                transaction.add(R.id.new_user_fragment_container, signUpFragment, "signUpFragment");
             }
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        if (fragmentManager.findFragmentByTag("signUpFragment").isAdded()){
+            fragmentManager.beginTransaction().remove(fragmentManager.findFragmentByTag("signUpFragment"));
+        }else super.onBackPressed();
+    }
+
+    @Override
+    public void onFragmentInteraction() {
+
+    }
 }
