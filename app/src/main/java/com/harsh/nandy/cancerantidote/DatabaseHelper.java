@@ -14,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAME="Book_Ambulance";
     public DatabaseHelper(Context context) {
         super(context,DATABASE_NAME, null, 1);
-
+        SQLiteDatabase db=this.getWritableDatabase();
     }
 
 
