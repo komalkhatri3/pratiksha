@@ -7,7 +7,12 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:maxSdkVersion="22" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
 
     <application
         android:allowBackup="true"
@@ -57,12 +62,12 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".near_by_hospitals"
-            android:label="@string/title_activity_near_by_hospitals" />
-        <activity
             android:name=".Ambulance_Hospital"
             android:label="@string/title_activity_ambulance__hospital"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Near_By_Hospital"
+            android:label="Near_By_Hospital"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

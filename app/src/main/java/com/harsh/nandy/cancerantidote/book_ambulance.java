@@ -37,7 +37,7 @@ public class book_ambulance extends AppCompatActivity {
         }
         if(view==findViewById(R.id.button14))
         {
-            Intent i=new Intent(book_ambulance.this,near_by_hospitals.class);
+            Intent i=new Intent(book_ambulance.this,Near_By_Hospital.class);
             startActivity(i);
 
         }
