@@ -49,12 +49,15 @@ public class Listofhospitals extends AppCompatActivity {
     }
     public void changefragment(View view)
     {
+        Button btn1,btn2,btn3,btn4;
        Fragment fragment;
         if(view==findViewById(R.id.button7)) {
             fragment = new fragment_area();
             FragmentTransaction ft =  getSupportFragmentManager().beginTransaction();
+
             ft.replace(R.id.fa, fragment);
             ft.commit();
+
         }
         if(view==findViewById(R.id.button10)) {
             fragment = new fragment_user();
@@ -70,9 +73,24 @@ public class Listofhospitals extends AppCompatActivity {
             ft.replace(R.id.fa, fragment);
             ft.commit();
         }
+     btn1=(Button) findViewById(R.id.button7);
+        btn1.setVisibility(btn1.GONE);
+
+        btn2=(Button) findViewById(R.id.button10);
+        btn2.setVisibility(btn2.GONE);
+        btn3=(Button) findViewById(R.id.button11);
+        btn3.setVisibility(btn3.GONE);
+        btn4=(Button) findViewById(R.id.button12);
+        btn4.setVisibility(btn4.GONE);
 
 
-        
+
+
+
+
+
+
+
     }
 
 }
