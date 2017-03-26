@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.WindowManager;
 
 public class login extends AppCompatActivity implements SignUpFragment.OnSignUpFragmentInteractionListener {
 
@@ -28,15 +29,17 @@ public class login extends AppCompatActivity implements SignUpFragment.OnSignUpF
                 SignUpFragment signUpFragment = new SignUpFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
-                transaction.add(R.id.new_user_fragment_container, signUpFragment, "signUpFragment");
+                transaction.add(R.id.new_user_fragment_container, signUpFragment, "signUpFragment").commit();
+                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
             }
         });
     }
 
     @Override
     public void onBackPressed() {
-        if (fragmentManager.findFragmentByTag("signUpFragment").isAdded()){
-            fragmentManager.beginTransaction().remove(fragmentManager.findFragmentByTag("signUpFragment"));
+        if (fragmentManager.findFragmentByTag("signUpFragment") != null){
+            if (fragmentManager.findFragmentByTag("signUpFragment").isAdded())
+                fragmentManager.beginTransaction().remove(fragmentManager.findFragmentByTag("signUpFragment")).commit();
         }else super.onBackPressed();
     }
 
