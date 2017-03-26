@@ -80,6 +80,7 @@ public class Ambulance_Hospital extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+                //not required
 
             }
         });
