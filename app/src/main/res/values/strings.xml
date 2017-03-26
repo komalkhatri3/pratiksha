@@ -23,4 +23,15 @@
         <item>Sikkim</item>
         <item>Tripura</item>
     </string-array>
+    <string-array name="cancer_types">
+        <item>skin cancer</item>
+        <item>breast cancer</item>
+        <item>lung cancer</item>
+        <item>prostate cancer</item>
+        <item>coloractal cancer</item>
+        <item>bladder cancer</item>
+        <item>lymphoma</item>
+        <item>kidney cancer</item>
+        <item>leukemia</item>
+    </string-array>
 </resources>

@@ -9,10 +9,13 @@ import android.view.View;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.widget.Button;
 
 import static android.R.attr.id;
 
 public class Listofhospitals extends AppCompatActivity {
+    //Button button;
+    //Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,26 +32,39 @@ public class Listofhospitals extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+     /*   button=(Button) findViewById(R.id.button7);
+            button.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View v)
+                {
+                    fragment = new fragment_specialization();
+                    FragmentManager fm = getSupportFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.add(R.id.fa, fragment);
+                    ft.commit();
+                }
+            });*/
+
+
     }
     public void changefragment(View view)
     {
        Fragment fragment;
         if(view==findViewById(R.id.button7)) {
             fragment = new fragment_area();
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentTransaction ft = fm.beginTransaction();
+            FragmentTransaction ft =  getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.fa, fragment);
             ft.commit();
         }
         if(view==findViewById(R.id.button10)) {
-            fragment = new fragment_area();
+            fragment = new fragment_user();
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.fa, fragment);
             ft.commit();
         }
         if(view==findViewById(R.id.button11)) {
-            fragment = new fragment_area();
+            fragment = new fragment_specialization();
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.fa, fragment);
