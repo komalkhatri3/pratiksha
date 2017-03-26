@@ -9,10 +9,13 @@ import android.view.View;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.widget.Button;
 
 import static android.R.attr.id;
 
 public class Listofhospitals extends AppCompatActivity {
+    //Button button;
+    //Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,34 +32,65 @@ public class Listofhospitals extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+     /*   button=(Button) findViewById(R.id.button7);
+            button.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View v)
+                {
+                    fragment = new fragment_specialization();
+                    FragmentManager fm = getSupportFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.add(R.id.fa, fragment);
+                    ft.commit();
+                }
+            });*/
+
+
     }
     public void changefragment(View view)
     {
+        Button btn1,btn2,btn3,btn4;
        Fragment fragment;
         if(view==findViewById(R.id.button7)) {
             fragment = new fragment_area();
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentTransaction ft = fm.beginTransaction();
+            FragmentTransaction ft =  getSupportFragmentManager().beginTransaction();
+
             ft.replace(R.id.fa, fragment);
             ft.commit();
+
         }
         if(view==findViewById(R.id.button10)) {
-            fragment = new fragment_area();
+            fragment = new fragment_user();
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.fa, fragment);
             ft.commit();
         }
         if(view==findViewById(R.id.button11)) {
-            fragment = new fragment_area();
+            fragment = new fragment_specialization();
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.fa, fragment);
             ft.commit();
         }
+     btn1=(Button) findViewById(R.id.button7);
+        btn1.setVisibility(btn1.GONE);
+
+        btn2=(Button) findViewById(R.id.button10);
+        btn2.setVisibility(btn2.GONE);
+        btn3=(Button) findViewById(R.id.button11);
+        btn3.setVisibility(btn3.GONE);
+        btn4=(Button) findViewById(R.id.button12);
+        btn4.setVisibility(btn4.GONE);
 
 
-        
+
+
+
+
+
+
+
     }
 
 }
