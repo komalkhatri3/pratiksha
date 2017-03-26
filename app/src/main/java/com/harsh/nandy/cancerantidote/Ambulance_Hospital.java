@@ -34,7 +34,7 @@ public class Ambulance_Hospital extends AppCompatActivity {
                         break;
                     case 4:
                         break;
-
+                     default:
                 }
             }
 
