@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Ambulance_Hospital extends AppCompatActivity {
-    DatabaseHelper databseHelper;
+    DatabaseHelper databseHelper = new DatabaseHelper(this);
     SQLiteDatabase sqLiteDatabase;
     Cursor cursor;
 
@@ -25,8 +25,7 @@ public class Ambulance_Hospital extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ambulance__hospital);
-        databseHelper=new DatabaseHelper(this);
-        ListView listView= (ListView) findViewById(R.id.listview1);
+        ListView listView= (ListView) findViewById(R.id.Listview1);
         mySpinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(Ambulance_Hospital.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.state_name));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -46,9 +45,9 @@ public class Ambulance_Hospital extends AppCompatActivity {
                     do
                     {
                         Ambulance ambulance =new Ambulance();
-                        ambulance.setHospital(cursor.getString(0));
-                        ambulance.setState(cursor.getString((1)));
-                        ambulance.setAvailable(cursor.getInt(2));
+                        ambulance.setHospital(cursor.getString(1));
+                        ambulance.setState(cursor.getString((2)));
+                        ambulance.setAvailable(cursor.getInt(3));
                         AmbulanceAvail.add(ambulance);
 
                     }while (cursor.moveToNext());

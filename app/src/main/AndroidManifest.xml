@@ -65,9 +65,6 @@
             android:name=".Ambulance_Hospital"
             android:label="@string/title_activity_ambulance__hospital"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Near_By_Hospital"
-            android:label="Near_By_Hospital"
-            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

@@ -14,13 +14,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAME="Book_Ambulance";
     public DatabaseHelper(Context context) {
         super(context,DATABASE_NAME, null, 1);
-        SQLiteDatabase db=this.getWritableDatabase();
+
     }
+
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE"+TABLE_NAME+"(ID PRIMARY KEY AUTOINCREMENT,HOSPITALS TEXT,STATE TEXT,AVAIL_AMBULANCE TEXT)");
-         onCreate(db);
+        db.execSQL("CREATE TABLE"+TABLE_NAME+"(ID PRIMARY KEY AUTOINCREMENT,HOSPITALS TEXT,STATE TEXT,AVAIL_AMBULANCE INTEGER)");
+      db=getWritableDatabase();
     }
 
     @Override

@@ -7,10 +7,12 @@ import java.io.Serializable;
  */
 
 public class Ambulance implements Serializable {
+    private int id;
     private String hospital;
     private String state;
     private int available;
-    public void setHospital(String hospital)
+    public int getId(){return this.id;}
+        public void setHospital(String hospital)
     {
         this.hospital=hospital;
     }
