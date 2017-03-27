@@ -54,10 +54,9 @@
         <activity
             android:name=".Otherservices"
             android:label="@string/title_activity_otherservices"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SignUp"/>
-            android:theme="@style/AppTheme.NoActionBar" />
-        <!--
+            android:theme="@style/AppTheme.NoActionBar" /><![CDATA[
+        android:theme="@style/AppTheme.NoActionBar" />
+        ]]><!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
              Note that the API key is linked to the encryption key used to sign the APK.
@@ -73,6 +72,8 @@
             android:name=".Ambulance_Hospital"
             android:label="@string/title_activity_ambulance__hospital"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".AmbulanceServices"/>
     </application>
 
 </manifest>
