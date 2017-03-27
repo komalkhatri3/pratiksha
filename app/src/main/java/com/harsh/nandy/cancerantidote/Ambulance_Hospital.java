@@ -4,7 +4,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Ambulance_Hospital extends AppCompatActivity {
-    DatabaseHelper databseHelper = new DatabaseHelper(this);
+    DatabaseHolder dbHandler = new DatabaseHolder(this);
     SQLiteDatabase sqLiteDatabase;
     Cursor cursor;
 
@@ -32,15 +31,12 @@ public class Ambulance_Hospital extends AppCompatActivity {
         mySpinner.setAdapter(myAdapter);
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-
-
-
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                sqLiteDatabase=databseHelper.getReadableDatabase();
+                dbHandler.open();
+                Cursor ambulanceData = dbHandler.returnHospitalData();
+
                 final List<Ambulance> AmbulanceAvail= new ArrayList<Ambulance>();
-                Log.d("MESSAGE","In onItemSelected ");
-                cursor = databseHelper.getdata(mySpinner.getSelectedItem().toString());
                 if(cursor.moveToFirst())
                     do
                     {
@@ -57,12 +53,7 @@ public class Ambulance_Hospital extends AppCompatActivity {
                 switch (position)
                 {
                     case 1:
-
                              String Hospital,avail;
-
-
-
-
                         break;
                     case 2:
 
@@ -84,6 +75,12 @@ public class Ambulance_Hospital extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.button_insert_fake_data).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dbHandler.open();
 
+            }
+        });
     }
 }

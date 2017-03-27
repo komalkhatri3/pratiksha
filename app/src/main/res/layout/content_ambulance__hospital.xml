@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.harsh.nandy.cancerantidote.Ambulance_Hospital"
     tools:showIn="@layout/activity_ambulance__hospital">
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="176dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="447dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.923"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
     <TextView
         android:id="@+id/textView"
-        android:layout_width="178dp"
-        android:layout_height="44dp"
-        android:text="Choose Your State"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginBottom="451dp" />
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="@string/choose_your_state"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:entries="@array/state_name"/>
+
+    <Button
+        android:text="@string/insert_fake_data_in_hospital_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_insert_fake_data"
+        android:layout_marginTop="250dp"/>
 
 
-    <ListView
+<!--    <ListView
         android:id="@+id/listview1"
         android:layout_width="383dp"
         android:layout_height="380dp"
@@ -40,5 +44,6 @@
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="87dp"></ListView>
-</android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteY="87dp"/>
+    -->
+</LinearLayout>

@@ -30,7 +30,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".firstpage"
+            android:name=".FirstPage"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -48,7 +48,7 @@
             android:label="@string/title_activity_listofhospitals"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".book_ambulance"
+            android:name=".AmbulanceServices"
             android:label="@string/title_activity_book_ambulance"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -73,7 +73,7 @@
             android:label="@string/title_activity_ambulance__hospital"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".AmbulanceServices"/>
+        <activity android:name=".AmbulanceServicesMap"/>
     </application>
 
 </manifest>

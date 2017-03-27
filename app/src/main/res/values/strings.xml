@@ -6,7 +6,6 @@
     <string name="password">Password</string>
     <string name="title_activity_listofhospitals">Listofhospitals</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_book_ambulance">book_ambulance</string>
     <string name="title_activity_otherservices">Otherservices</string>
@@ -26,6 +25,17 @@
     </string>
     <string name="title_activity_near_by_hospitals">Map</string>
     <string name="title_activity_ambulance__hospital">Ambulance_Hospital</string>
+    <string name="choose_this_location">Choose this location</string>
+    <string name="login_signup">Login/signup</string>
+    <string name="other_services">Other services</string>
+    <string name="ambulance_services">Ambulance Services</string>
+    <string name="list_of_hospitals">List of Hospitals</string>
+    <string name="what_is_cancer">What is Cancer?</string>
+    <string name="cancer_symptoms">Cancer Symptoms</string>
+    <string name="choose_hospital_for_ambulance">Choose hospital for ambulance</string>
+    <string name="find_nearby_hospitals">Find nearby hospitals</string>
+    <string name="insert_fake_data_in_hospital_table">Insert fake data in hospital table</string>
+    <string name="choose_your_state">Choose Your State</string>
     <string-array name="state_name">
 
         <item>Arunachal Pradesh.</item>

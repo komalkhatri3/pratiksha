@@ -2,16 +2,12 @@ package com.harsh.nandy.cancerantidote;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 
-public class firstpage extends AppCompatActivity {
+public class FirstPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,24 +26,24 @@ public class firstpage extends AppCompatActivity {
     }
     public void change_activity(View view)
     {
-        if(view== findViewById(R.id.button))
+        if(view== findViewById(R.id.button_list_of_hospitals))
         {
-            Intent i=new Intent(firstpage.this,Listofhospitals.class);
+            Intent i=new Intent(FirstPage.this,Listofhospitals.class);
             startActivity(i);
         }
-        if(view== findViewById(R.id.button2))
+        if(view== findViewById(R.id.button_ambulance_services))
         {
-            Intent i=new Intent(firstpage.this,book_ambulance.class);
+            Intent i=new Intent(FirstPage.this,AmbulanceServices.class);
             startActivity(i);
         }
-        if(view== findViewById(R.id.button3))
+        if(view== findViewById(R.id.button_other_services))
         {
-            Intent i=new Intent(firstpage.this,Otherservices.class);
+            Intent i=new Intent(FirstPage.this,Otherservices.class);
             startActivity(i);
         }
-        if(view== findViewById(R.id.button5))
+        if(view== findViewById(R.id.button_login_signup))
         {
-            Intent i=new Intent(firstpage.this,login.class);
+            Intent i=new Intent(FirstPage.this,login.class);
             startActivity(i);
         }
     }
@@ -55,7 +51,7 @@ public class firstpage extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
+        // automatically handle clicks on the Home/Up button_list_of_hospitals, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 

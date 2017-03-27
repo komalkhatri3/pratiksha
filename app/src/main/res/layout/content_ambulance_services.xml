@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.harsh.nandy.cancerantidote.book_ambulance"
-    tools:showIn="@layout/activity_book_ambulance">
+    tools:context="com.harsh.nandy.cancerantidote.AmbulanceServices"
+    tools:showIn="@layout/activity_ambulance_services">
 
     <Button
         android:id="@+id/button13"
@@ -15,7 +15,8 @@
         android:layout_marginTop="6dp"
         android:background="@color/colorAccent"
         android:onClick="NextPage"
-        android:text="Choose Hospital FOR AMBULANCE"
+        android:textAllCaps="false"
+        android:text="@string/choose_hospital_for_ambulance"
         android:textColor="#FFFFFF"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,7 +28,8 @@
         android:layout_height="55dp"
         android:background="@color/colorAccent"
         android:onClick="NextPage"
-        android:text="FIND NEAR BY HOSPITALS"
+        android:textAllCaps="false"
+        android:text="@string/find_nearby_hospitals"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.333"

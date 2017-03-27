@@ -8,7 +8,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.harsh.nandy.cancerantidote.AmbulanceServices" />
+        tools:context="com.harsh.nandy.cancerantidote.AmbulanceServicesMap" />
 
     <Button
         android:id="@+id/button_choose_location"

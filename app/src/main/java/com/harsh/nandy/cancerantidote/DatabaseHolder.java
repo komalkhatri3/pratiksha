@@ -37,7 +37,7 @@ public class DatabaseHolder {
 
     private static final String create_table_hospital = "create table if not exists Hospital (" +
             "id text not null primary key, Name text not null, address text not null," +
-            " userRating int not null, ambulanceCount int not null);";
+            "  ambulanceCount int not null, userRating int not null);";
 
     private static final String create_table_nurse = "create table if not exists Nurse (" +
             "id text not null primary key, Name text not null, contact int not null," +
@@ -82,6 +82,16 @@ public class DatabaseHolder {
         content.put(patient_hospitalID, hospitalID);
         content.put(patient_address, address);
         return db.insertOrThrow(patient_tableName, null, content);
+    }
+
+    public long insertHospitalData(String id, String name, String address, int ambulanceCount, int userRating){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("id", id);
+        contentValues.put("Name", name);
+        contentValues.put("address", address);
+        contentValues.put("ambulanceCount", ambulanceCount);
+        contentValues.put("userRating", userRating);
+        return db.insertOrThrow("Hospital", null, contentValues);
     }
 
     public long deletePatientData(String aadhar) {

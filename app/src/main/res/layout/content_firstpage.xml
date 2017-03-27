@@ -6,17 +6,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.harsh.nandy.cancerantidote.firstpage"
-    tools:showIn="@layout/activity_firstpage"
-    >
-
+    tools:context="com.harsh.nandy.cancerantidote.FirstPage"
+    tools:showIn="@layout/activity_firstpage">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_cancer_symptoms"
+        android:layout_width="385dp"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent"
+        android:text="@string/cancer_symptoms"
+        android:textColor="#FFFFFF"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.099"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button_what_is_cancer"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="@color/colorAccent"
-        android:text="List of Hospitals"
+        android:text="@string/what_is_cancer"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_list_of_hospitals"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent"
+        android:text="@string/list_of_hospitals"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#FFFFFF"
         app:layout_constraintHorizontal_bias="0.0"
@@ -28,11 +54,11 @@
         android:onClick="change_activity"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_ambulance_services"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="@color/colorAccent"
-        android:text="Ambulance Services"
+        android:text="@string/ambulance_services"
         android:textColor="#FFFFFF"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -44,11 +70,11 @@
         android:onClick="change_activity" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_other_services"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="@color/colorAccent"
-        android:text="Other services"
+        android:text="@string/other_services"
         android:textColor="#FFFFFF"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -59,25 +85,11 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:background="@color/colorAccent"
-        android:text="What is Cancer?"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintVertical_bias="0.239"
-        app:layout_constraintHorizontal_bias="0.0" />
-
-    <Button
-        android:id="@+id/button5"
+        android:id="@+id/button_login_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="Login/signup"
+        android:text="@string/login_signup"
         android:textColor="#FFFFFF"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -87,17 +99,4 @@
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="change_activity"/>
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="385dp"
-        android:layout_height="48dp"
-        android:background="@color/colorAccent"
-        android:text="Cancer Symptoms"
-        android:textColor="#FFFFFF"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.099"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 </android.support.constraint.ConstraintLayout>
