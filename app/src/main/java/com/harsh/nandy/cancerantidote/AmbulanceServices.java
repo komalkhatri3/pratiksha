@@ -18,18 +18,13 @@ public class AmbulanceServices extends AppCompatActivity {
 
     }
 
-    public void NextPage(View view)
-    {
-        if(view==findViewById(R.id.button13))
-        {
+    public void NextPage(View view) {
+        if(view==findViewById(R.id.button_choose_hospital_for_ambulance)) {
             Intent i=new Intent(AmbulanceServices.this,Ambulance_Hospital.class);
             startActivity(i);
-
         }
-        if(view==findViewById(R.id.button14))
-        {
-
-
+        if(view==findViewById(R.id.button_find_nearby_hospitals)) {
+            startActivity(new Intent(this, AmbulanceServicesMap.class));
         }
     }
 

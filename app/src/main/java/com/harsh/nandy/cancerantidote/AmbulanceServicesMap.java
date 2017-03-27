@@ -15,6 +15,7 @@ import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -56,16 +57,21 @@ public class AmbulanceServicesMap extends FragmentActivity implements OnMapReady
         chooseLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder dialog = new AlertDialog.Builder(AmbulanceServicesMap.this);
-                dialog.setTitle("Your Location");
-                dialog.setMessage("latitude: " + latitude + "\nLongitude: " + longitude);
-                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                dialog.show();
+                if (latitude == 0.0 || longitude == 0.0){
+                    Toast.makeText(AmbulanceServicesMap.this, "Please wait while we locate you...", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(AmbulanceServicesMap.this);
+                    dialog.setTitle("Your Location");
+                    dialog.setMessage("latitude: " + latitude + "\nLongitude: " + longitude);
+                    dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    dialog.show();
+                }
             }
         });
     }
