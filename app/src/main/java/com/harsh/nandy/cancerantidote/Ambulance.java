@@ -2,38 +2,54 @@ package com.harsh.nandy.cancerantidote;
 
 import java.io.Serializable;
 
-/**
+/*
  * Created by popla on 26-03-2017.
  */
 
 public class Ambulance implements Serializable {
-    private int id;
-    private String hospital;
+    private int id = 0;
     private String state;
-    private int available;
-    public int getId(){return this.id;}
-        public void setHospital(String hospital)
-    {
-        this.hospital=hospital;
+    private String hospital;
+    private boolean available;
+
+    public void setId(String id) {
+        this.id = Integer.parseInt(id);
     }
-    public void setState(String state)
-    {
+
+    public void setState(String state){
         this.state=state;
     }
-    public void setAvailable(int available)
-    {
-        this.available=available;
+
+    public void setHospital(String hospital) {
+        this.hospital=hospital;
     }
-    public String getHospital()
-    {
-        return  this.hospital;
+
+    public void setAvailable(String available) {
+        switch (available){
+            case "0":
+                this.available = false;
+                break;
+            case "1":
+                this.available = true;
+                break;
+            default:
+                break;
+        }
     }
-    public String getState()
-    {
+
+    public int getId(){
+        return this.id;
+    }
+
+    public String getState() {
         return  this.state;
     }
-    public int getAvailable()
-    {
+
+    public String getHospital() {
+        return  this.hospital;
+    }
+
+    public boolean getAvailable() {
         return this.available;
     }
 }

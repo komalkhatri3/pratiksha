@@ -31,8 +31,17 @@
         android:text="@string/insert_fake_data_in_hospital_table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:id="@+id/button_insert_fake_data"
-        android:layout_marginTop="250dp"/>
+        android:layout_marginTop="200dp"/>
+
+    <Button
+        android:text="@string/insert_fake_data_in_ambulance_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:id="@+id/button_insert_fake_data_ambulance"
+        android:layout_marginTop="20dp"/>
 
 
 <!--    <ListView

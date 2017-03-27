@@ -35,9 +35,11 @@
     <string name="choose_hospital_for_ambulance">Choose hospital for ambulance</string>
     <string name="find_nearby_hospitals">Find nearby hospitals</string>
     <string name="insert_fake_data_in_hospital_table">Insert fake data in hospital table</string>
+    <string name="insert_fake_data_in_ambulance_table">Insert fake data in ambulance table</string>
     <string name="choose_your_state">Choose Your State</string>
-    <string-array name="state_name">
 
+    <string-array name="state_name">
+        <item>Click to select state</item>
         <item>Arunachal Pradesh.</item>
         <item>Assam</item>
         <item>Manipur</item>
@@ -47,6 +49,7 @@
         <item>Sikkim</item>
         <item>Tripura</item>
     </string-array>
+
     <string-array name="cancer_types">
         <item>skin cancer</item>
         <item>breast cancer</item>
