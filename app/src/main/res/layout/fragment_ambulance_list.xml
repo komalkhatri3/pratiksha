@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:theme="@style/dialogTheme"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context="com.harsh.nandy.cancerantidote.AmbulanceList">
+
+    <TableLayout
+        android:gravity="center_horizontal"
+        android:id="@+id/ambulance_table"
+        android:dividerPadding="@dimen/activity_horizontal_margin"
+        android:divider="@color/colorBackgroundDark"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </TableLayout>
+
+</LinearLayout>

@@ -38,9 +38,9 @@ public class DatabaseHolder {
 
     private static final String create_table_doctor = "create table if not exists Doctor (id text not null primary key, Name text not null, SpecialisedField text not null, contact int not null);";
 
-    private static final String create_table_hospital = "create table if not exists Hospital (id text not null primary key, Name text not null, address text not null, ambulanceCount int not null, userRating int not null);";
+    private static final String create_table_hospital = "create table if not exists Hospital (id integer not null primary key , Name text not null, address text not null, ambulanceCount int not null, userRating int not null);";
 
-    private static final String create_table_ambulance = "create table if not exists Ambulance (id text not null primary key, stateIn text not null, hospital text not null, availability int not null, FOREIGN KEY (hospital) REFERENCES Hospital(id));";
+    private static final String create_table_ambulance = "create table if not exists Ambulance (id text not null primary key , stateIn text not null, hospital text not null, availability int not null, FOREIGN KEY (hospital) REFERENCES Hospital(id));";
 
     private static final String create_table_nurse = "create table if not exists Nurse (id text not null primary key, Name text not null, contact int not null, available int not null, hospitalID text not null, FOREIGN KEY (hospitalID) REFERENCES Hospital(id));";
 
@@ -90,9 +90,8 @@ public class DatabaseHolder {
         return db.insertOrThrow(hospital_tableName, null, contentValues);
     }
 
-    public long insertAmbulanceData(String id, String state, String hospital){
+    public long insertAmbulanceData(String state, String hospital){
         ContentValues contentValues = new ContentValues();
-        contentValues.put("id", id);
         contentValues.put("stateIn", state);
         contentValues.put("hospital", hospital);
         contentValues.put("availability", "1");
@@ -189,7 +188,7 @@ public class DatabaseHolder {
     public Cursor returnSelectedStateAmbulanceAvailability(String state){
         Cursor cursor = null;
         try{
-            cursor = db.query(ambulance_tableName, new String[]{"id", "hospital", "availability"}, "stateIn = '"+ state +"'", null, null, null, null);
+            cursor = db.query(true, ambulance_tableName, new String[]{"id", "hospital", "availability"}, "stateIn = '"+ state +"'", null, null, null, null, null);
         }
         catch (SQLiteException e){
             if (e.getMessage().contains("no such table")){

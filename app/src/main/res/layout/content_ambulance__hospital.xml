@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:padding="@dimen/activity_horizontal_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.harsh.nandy.cancerantidote.Ambulance_Hospital"
@@ -21,10 +21,12 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:gravity="center_horizontal"
+        android:layout_below="@+id/textView"
+        android:background="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_vertical_margin"
+        android:paddingEnd="@dimen/activity_vertical_margin"
         android:entries="@array/state_name"/>
 
     <Button
@@ -32,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
+        android:layout_below="@+id/spinner"
         android:id="@+id/button_insert_fake_data"
         android:layout_marginTop="200dp"/>
 
@@ -39,20 +42,16 @@
         android:text="@string/insert_fake_data_in_ambulance_table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/button_insert_fake_data"
         android:textAllCaps="false"
         android:id="@+id/button_insert_fake_data_ambulance"
         android:layout_marginTop="20dp"/>
 
+<!--
+    <FrameLayout
+        android:id="@+id/ambulance_list_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+-->
 
-<!--    <ListView
-        android:id="@+id/listview1"
-        android:layout_width="383dp"
-        android:layout_height="380dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="87dp"/>
-    -->
-</LinearLayout>
+</RelativeLayout>

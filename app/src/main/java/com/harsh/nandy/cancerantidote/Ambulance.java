@@ -24,7 +24,7 @@ public class Ambulance implements Serializable {
         this.hospital=hospital;
     }
 
-    public void setAvailable(String available) {
+    public void setAvailability(String available) {
         switch (available){
             case "0":
                 this.available = false;
@@ -49,7 +49,7 @@ public class Ambulance implements Serializable {
         return  this.hospital;
     }
 
-    public boolean getAvailable() {
+    public boolean getAvailability() {
         return this.available;
     }
 }

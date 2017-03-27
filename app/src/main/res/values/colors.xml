@@ -4,4 +4,7 @@
     <color name="colorPrimaryTranslucent">#c83f51b5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff4081</color>
+    <color name="colorBackground">#eeeeee</color>
+    <color name="colorBackgroundDark">#757575</color>
+    <color name="colorBackgroundTranslucent">#e4757575</color>
 </resources>
