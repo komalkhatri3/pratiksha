@@ -30,7 +30,7 @@ public class fragment_specialization extends Fragment {
         myAdapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.cancer_types));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         myspinner.setAdapter(myAdapter);
-        return inflater.inflate(R.layout.fragment_fragment_specialization, container, false);
+        return view;
 
     }
 }
