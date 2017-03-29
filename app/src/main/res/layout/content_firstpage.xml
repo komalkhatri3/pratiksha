@@ -38,20 +38,35 @@
         app:layout_constraintHorizontal_bias="0.0" />
 
     <Button
-        android:id="@+id/button_list_of_hospitals"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:id="@+id/button_login_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="@string/list_of_hospitals"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:onClick="change_activity"
+        android:text=" patient record"
         android:textColor="#FFFFFF"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.397"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="change_activity"/>
+        app:layout_constraintVertical_bias="0.401" />
+
+    <Button
+        android:id="@+id/button_list_of_hospitals"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent"
+        android:onClick="change_activity"
+        android:text="LIST OF HOSPITAL"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58" />
 
     <Button
         android:id="@+id/button_ambulance_services"
@@ -63,7 +78,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.529"
+        app:layout_constraintVertical_bias="0.751"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
@@ -76,27 +91,14 @@
         android:background="@color/colorAccent"
         android:text="@string/other_services"
         android:textColor="#FFFFFF"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.684"
+        app:layout_constraintVertical_bias="0.924"
         android:onClick="change_activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <Button
-        android:id="@+id/button_login_signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="@string/login_signup"
-        android:textColor="#FFFFFF"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.885"
-        app:layout_constraintHorizontal_bias="0.459"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="change_activity"/>
+
 
 </android.support.constraint.ConstraintLayout>

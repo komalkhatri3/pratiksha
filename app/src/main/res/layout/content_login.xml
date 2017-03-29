@@ -56,7 +56,9 @@
             android:text="Login"
             tools:layout_editor_absoluteY="158dp"
             android:layout_marginStart="8dp"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:onClick="LogIn"
+            />
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/button_signup"
