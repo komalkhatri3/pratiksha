@@ -30,7 +30,7 @@ public class fragment_user extends Fragment {
         View view= inflater.inflate(R.layout.fragment_fragment_user, container, false);
         listView1=(ListView) view.findViewById(R.id.list_user);
         String user[]={""};
-        for(int i=0;i<cursor.getCount();i++)
+    for(int i=0;i<cursor.getCount();i++)
         {
             user[i]=cursor.getString(i);
         }
