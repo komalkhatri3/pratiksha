@@ -20,6 +20,7 @@ public class Listofhospitals extends AppCompatActivity {
         setContentView(R.layout.activity_listofhospitals);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ;
 
 
 
