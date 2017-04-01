@@ -63,4 +63,9 @@
     </string-array>
     <string name="title_activity_what_is_cancer">WhatIsCancer</string>
     <string name="title_activity_cancer_symptoms">CancerSymptoms</string>
+    <string name="title_activity_video">Video</string>
+    <string name="title_activity_counselling">Counselling</string>
+    <string name="title_activity_ivr">Ivr</string>
+    <string name="title_activity_vns">Vns</string>
+    <string name="title_activity_patient_record">PatientRecord</string>
 </resources>

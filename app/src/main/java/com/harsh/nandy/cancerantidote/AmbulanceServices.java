@@ -24,7 +24,7 @@ public class AmbulanceServices extends AppCompatActivity {
             startActivity(i);
         }
         if(view==findViewById(R.id.button_find_nearby_hospitals)) {
-            startActivity(new Intent(this, AmbulanceServicesMap.class));
+            startActivity(new Intent(this,MapsActivity.class));
         }
     }
 
