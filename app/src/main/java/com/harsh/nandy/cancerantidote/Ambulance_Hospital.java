@@ -65,7 +65,6 @@ public class Ambulance_Hospital extends AppCompatActivity {
                     if (ambulanceData != null) {
                         ambulanceData.moveToFirst();
                         Ambulance ambulance = new Ambulance();
-                        Log.d("MESSAGE","In View Hospital");
                         final List<Ambulance> ambulanceList = new ArrayList<>();
 
                         while (!ambulanceData.isAfterLast()) {
@@ -77,18 +76,38 @@ public class Ambulance_Hospital extends AppCompatActivity {
                         }
                         dbHandler.close();
 
-                        Adaptor adaptor;
-                        adaptor = new Adaptor(this,ambulanceList);
+                        dialog = new Dialog(Ambulance_Hospital.this);
+                        dialog.setContentView(R.layout.fragment_ambulance_list);
+                        dialog.setTitle(headerString);
+                        TableLayout tableLayout = (TableLayout) dialog.findViewById(R.id.ambulance_table);
 
-                        ListView listView = (ListView) findViewById(R.id.listview);
-                        listView.setAdapter(adaptor);
+                        for (int i = 0; i < ambulanceList.size(); i++){
+                            TableRow tableRow = new TableRow(Ambulance_Hospital.this);
+                            tableRow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                            TextView idTextView = new TextView(Ambulance_Hospital.this);
+                            TextView hospital = new TextView(Ambulance_Hospital.this);
+                            TextView availability = new TextView(Ambulance_Hospital.this);
+
+                            String idText = "" + ambulanceList.get(i).getId() + "\t\t";
+                            idTextView.setText(idText);
+                            String hospitalText = ambulanceList.get(i).getHospital() + "\t\t";
+                            hospital.setText(hospitalText);
+                            String availabilityText = isAvailable(ambulanceList, i) + "\t\t";
+                            availability.setText(availabilityText);
+
+                            tableRow.addView(idTextView);
+                            tableRow.addView(hospital);
+                            tableRow.addView(availability);
+
+                            tableLayout.addView(tableRow, i);
+                        }
                     }
 
-
+                    dialog.show();
                 }
-            }*/
-
             }
+
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 //not required
@@ -96,7 +115,27 @@ public class Ambulance_Hospital extends AppCompatActivity {
             }
         });
 
+/*        findViewById(R.id.button_insert_fake_data).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                findViewById(R.id.button_insert_fake_data_ambulance).setVisibility(View.VISIBLE);
+                dbHandler.open();
+                long i = dbHandler.insertHospitalData(random("string"), random("string"),
+                        random("string"), random("number"), random("number"));
+                System.out.println(i);
+                dbHandler.close();
+            }
+        });
 
+        findViewById(R.id.button_insert_fake_data_ambulance).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dbHandler.open();
+                long i = dbHandler.insertAmbulanceData(random("array"), random("string"));
+                System.out.println(i);
+                dbHandler.close();
+            }
+        });*/
     }
 
     public String isAvailable(List<Ambulance> ambulanceList, int index) {
@@ -104,6 +143,7 @@ public class Ambulance_Hospital extends AppCompatActivity {
             return "yes";
         } else return "no";
     }
+
 
 
     @Override
