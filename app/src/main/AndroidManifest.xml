@@ -23,7 +23,6 @@
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
-
         android:label="cancerAntidote"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -93,6 +92,10 @@
         <activity
             android:name=".Vns"
             android:label="@string/title_activity_vns"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PatientRecord"
+            android:label="@string/title_activity_patient_record"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
