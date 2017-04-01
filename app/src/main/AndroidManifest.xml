@@ -100,7 +100,10 @@
         <activity
             android:name=".Splash"
             android:label="@string/title_activity_splash"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".HospitalArea" />
+        <activity android:name=".HospitalSpecialization" />
+        <activity android:name=".HospitalUser"></activity>
     </application>
 
 </manifest>
