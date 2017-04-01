@@ -63,4 +63,6 @@
     </string-array>
     <string name="title_activity_what_is_cancer">WhatIsCancer</string>
     <string name="title_activity_cancer_symptoms">CancerSymptoms</string>
+    <string name="title_activity_addhospital">addhospital</string>
+    <string name="title_activity_addambulance">Addambulance</string>
 </resources>

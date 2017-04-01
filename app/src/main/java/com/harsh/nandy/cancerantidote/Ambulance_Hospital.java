@@ -1,28 +1,19 @@
 package com.harsh.nandy.cancerantidote;
 
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Ambulance_Hospital extends AppCompatActivity implements DialogInterface.OnDismissListener{
+public class Ambulance_Hospital extends AppCompatActivity {
 
     FragmentManager fragmentManager;
     DatabaseHolder dbHandler;
-    Dialog dialog;
+
 
     Spinner mySpinner;
 
@@ -39,8 +30,75 @@ public class Ambulance_Hospital extends AppCompatActivity implements DialogInter
         mySpinner.setAdapter(myAdapter);
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedState = parent.getItemAtPosition(position).toString();
+                if (selectedState.equals("Assam")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Dr. B. Borooach cancer instittute";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Arunachal Pradesh")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Heema Hospital";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Manipur")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Shija Hospitals and Research Center";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Meghalaya")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Civil Hospital";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Mizoram")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Regional Cancer Hospital";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Nagaland")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Eden Medical Centre";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Sikkim")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "STNM Hospital";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Tripura")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Agartalla Gov. Cancer hospital";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+            /*{
                 if (position > 0) {
                     String selectedState = getResources().getStringArray(R.array.state_name)[position];
 //                    AmbulanceList ambulanceListFragment = new AmbulanceList();
@@ -111,24 +169,43 @@ public class Ambulance_Hospital extends AppCompatActivity implements DialogInter
             }
         });
 
+/*        findViewById(R.id.button_insert_fake_data).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                findViewById(R.id.button_insert_fake_data_ambulance).setVisibility(View.VISIBLE);
+                dbHandler.open();
+                long i = dbHandler.insertHospitalData(random("string"), random("string"),
+                        random("string"), random("number"), random("number"));
+                System.out.println(i);
+                dbHandler.close();
+            }
+        });
 
-    }
+        findViewById(R.id.button_insert_fake_data_ambulance).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dbHandler.open();
+                long i = dbHandler.insertAmbulanceData(random("array"), random("string"));
+                System.out.println(i);
+                dbHandler.close();
+            }
+        });*/
+            }
 
-    public String isAvailable(List<Ambulance> ambulanceList, int index){
-        if (ambulanceList.get(index).getAvailability()){
-            return "yes";
-        } else return  "no";
-    }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
+           /* public String isAvailable(List<Ambulance> ambulanceList, int index) {
+                if (ambulanceList.get(index).getAvailability()) {
+                    return "yes";
+                } else return "no";
+            }*/
 
-    @Override
-    public void onDismiss(DialogInterface dialogInterface) {
-        mySpinner.setSelection(0, true);
+
     }
 }
