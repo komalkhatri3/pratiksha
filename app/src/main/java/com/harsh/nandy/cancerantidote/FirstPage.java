@@ -43,8 +43,7 @@ public class FirstPage extends AppCompatActivity {
         }
         if(view== findViewById(R.id.button_login_signup))
         {
-            Intent i=new Intent(FirstPage.this,login.class);
-            startActivity(i);
+
         }
     }
 
