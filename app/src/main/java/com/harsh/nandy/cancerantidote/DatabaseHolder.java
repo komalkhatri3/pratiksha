@@ -199,6 +199,21 @@ public class DatabaseHolder {
         }
         return cursor;
     }
+    public Cursor getListuser()
+    {
+        Cursor cursor=null;
+        try{
+            cursor=db.query(true, hospital_tableName,new String[]{"hospital"},null,null,null,null,"userRating",null);
+        }
+        catch (SQLiteException e){
+            if (e.getMessage().contains("no such table")){
+                Toast.makeText(context, "ERROR: Table doesn't exist!", Toast.LENGTH_SHORT).show();
+                // create table
+                // re-run query, etc.
+            } else e.printStackTrace();
+        }
+        return cursor;
+    }
 
 
 
