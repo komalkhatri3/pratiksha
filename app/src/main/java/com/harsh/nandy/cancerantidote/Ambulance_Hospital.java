@@ -9,8 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.List;
-
 public class Ambulance_Hospital extends AppCompatActivity {
 
     FragmentManager fragmentManager;
@@ -32,14 +30,70 @@ public class Ambulance_Hospital extends AppCompatActivity {
         mySpinner.setAdapter(myAdapter);
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedState = parent.getItemAtPosition(position).toString();
-                if(selectedState.equals("Assam"))
-                {
-                    TextView name,available;
-                    name= (TextView) findViewById(R.id.Hospital_name);
-                    String Name="Dr. B. Borooach cancer instittute";
+                if (selectedState.equals("Assam")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Dr. B. Borooach cancer instittute";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Arunachal Pradesh")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Heema Hospital";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Manipur")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Shija Hospitals and Research Center";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Meghalaya")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Civil Hospital";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Mizoram")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Regional Cancer Hospital";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Nagaland")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Eden Medical Centre";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Sikkim")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "STNM Hospital";
+                    name.setText(Name);
+
+                    name.setVisibility(View.VISIBLE);
+                }
+                if (selectedState.equals("Tripura")) {
+                    TextView name, available;
+                    name = (TextView) findViewById(R.id.Hospital_name);
+                    String Name = "Agartalla Gov. Cancer hospital";
                     name.setText(Name);
 
                     name.setVisibility(View.VISIBLE);
@@ -136,18 +190,22 @@ public class Ambulance_Hospital extends AppCompatActivity {
                 dbHandler.close();
             }
         });*/
-    }
+            }
 
-    public String isAvailable(List<Ambulance> ambulanceList, int index) {
-        if (ambulanceList.get(index).getAvailability()) {
-            return "yes";
-        } else return "no";
-    }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
+           /* public String isAvailable(List<Ambulance> ambulanceList, int index) {
+                if (ambulanceList.get(index).getAvailability()) {
+                    return "yes";
+                } else return "no";
+            }*/
+
+
     }
 }
