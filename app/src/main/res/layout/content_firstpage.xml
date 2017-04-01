@@ -93,7 +93,7 @@
         android:layout_marginRight="8dp"
         android:background="@color/colorAccent"
         android:onClick="change_activity"
-        android:text="@string/cancer_symptoms"
+        android:text="@string/cancer_symptom"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
