@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.harsh.nandy.cancerantidote.WhatIsCancer"
+    tools:showIn="@layout/activity_what_is_cancer">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        android:text="WHAT IS CANCER"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.397"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        android:layout_marginBottom="468dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="384dp"
+        android:layout_height="463dp"
+        android:layout_marginBottom="-75dp"
+        android:isScrollContainer="true"
+        android:lineSpacingExtra="8sp"
+        android:maxLines="100"
+        android:scrollbars="vertical"
+        android:text="Cancer is a group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body.[1][2] Not all tumors are cancerous; benign tumors do not spread to other parts of the body.Over 100 types of cancers affect humans.[2]  Tobacco use is the cause of about 22% of cancer deaths.[1] Another 10% is due to obesity, poor diet, lack of physical activity and drinking alcohol.[1][4] Other factors include certain infections, exposure to ionizing radiation and environmental pollutants.[5] In the developing world nearly 20% of cancers are due to infections such as hepatitis B, hepatitis C and human papillomavirus (HPV).[1] These factors act, at least partly, by changing the genes of a cell.[6] Typically many genetic changes are required before cancer develops.Many cancers can be prevented by not smoking, maintaining a healthy weight, not drinking too much alcohol, eating plenty of vegetables, fruits and whole grains, vaccination against certain infectious diseases, not eating too much processed and red meat, and avoiding too much sunlight exposure.[9][10] Early detection through screening is useful for cervical and colorectal cancer.The majority of cancers, some 90–95% of cases, are due to environmental factors. The remaining 5–10% are due to inherited genetics.[5] Environmental, as used by cancer researchers, means any cause that is not inherited genetically, such as lifestyle, economic and behavioral factors and not merely pollution.[29] Common environmental factors that contribute to cancer death include tobacco (25–30%), diet and obesity (30–35%), infections (15–20%), radiation (both ionizing and non-ionizing, up to 10%), stress, lack of physical activity and environmental pollutants.[5]  It is not generally possible to prove what caused a particular cancer because the various causes do not have specific fingerprints."
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="48dp" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.harsh.nandy.cancerantidote.CancerSymptoms"
+    tools:showIn="@layout/activity_cancer_symptoms">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="change_activity"
+        android:text="CANCER SYMPTOMS"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="8sp"
+        android:text="When cancer begins, it produces no symptoms. Signs and symptoms appear as the mass grows or ulcerates. The findings that result depend on the cancer's type and location. Few symptoms are specific. Many frequently occur in individuals who have other conditions. Cancer is a &quot;great imitator&quot;. Thus, it is common for people diagnosed with cancer to have been treated for other diseases, which were hypothesized to be causing their symptoms.[26]  People may become anxious or depressed post-diagnosis. The risk of suicide in people with cancer is approximately double.[27]  Local symptoms Local symptoms may occur due to the mass of the tumor or its ulceration. For example, mass effects from lung cancer can block the bronchus resulting in cough or pneumonia; esophageal cancer can cause narrowing of the esophagus, making it difficult or painful to swallow; and colorectal cancer may lead to narrowing or blockages in the bowel, affecting bowel habits. Masses in breasts or testicles may produce observable lumps. Ulceration can cause bleeding that, if it occurs in the lung, will lead to coughing up blood, in the bowels to anemia or rectal bleeding, in the bladder to blood in the urine and in the uterus to vaginal bleeding. Although localized pain may occur in advanced cancer, the initial swelling is usually painless. Some cancers can cause a buildup of fluid within the chest or abdomen.[26]  Systemic symptoms General symptoms occur due to effects that are not related to direct or metastatic spread. These may include: unintentional weight loss, fever, excessive fatigue and changes to the skin.[28] Hodgkin disease, leukemias and cancers of the liver or kidney can cause a persistent fever.[26]  Some cancers may cause specific groups of systemic symptoms, termed paraneoplastic phenomena. Examples include the appearance of myasthenia gravis in thymoma and clubbing in lung cancer.[26]  Metastasis Main article: Metastasis Cancer can spread from its original site by local spread, lymphatic spread to regional lymph nodes or by hematogenous spread via the blood to distant sites, known as metastasis. When cancer spreads by a hematogenous route, it usually spreads all over the body. However, cancer 'seeds' grow in certain selected site only ('soil') as hypothesized in the soil and seed hypothesis of cancer metastasis. The symptoms of metastatic cancers depend on the tumor location and can include enlarged lymph nodes (which can be felt or sometimes seen under the skin and are typically hard), enlarged liver or enlarged spleen, which can be felt in the abdomen, pain or fracture of affected bones and neurological symptoms.["
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="67dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</android.support.constraint.ConstraintLayout>

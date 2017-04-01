@@ -46,6 +46,16 @@ public class FirstPage extends AppCompatActivity {
             Intent i=new Intent(FirstPage.this,login.class);
             startActivity(i);
         }
+        if(view== findViewById(R.id.button_what_is_cancer))
+        {
+            Intent i=new Intent(FirstPage.this,WhatIsCancer.class);
+            startActivity(i);
+        }
+        if(view== findViewById(R.id.button_cancer_symptoms))
+        {
+            Intent i=new Intent(FirstPage.this,CancerSymptoms.class);
+            startActivity(i);
+        }
     }
 
     @Override

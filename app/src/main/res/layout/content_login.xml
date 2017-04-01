@@ -9,8 +9,8 @@
     tools:showIn="@layout/activity_login">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="495dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -54,6 +54,7 @@
             android:layout_width="88dp"
             android:layout_height="48dp"
             android:text="Login"
+
             tools:layout_editor_absoluteY="158dp"
             android:layout_marginStart="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
