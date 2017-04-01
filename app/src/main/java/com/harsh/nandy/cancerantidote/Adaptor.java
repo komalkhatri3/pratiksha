@@ -19,7 +19,7 @@ public class Adaptor {
 
 
     public Adaptor(Context context, List<Ambulance> AmbulanceAvail) {
-        this.context= (Context) context;
+        this.context= context;
         this.AmbulanceAvail = AmbulanceAvail;
     }
 

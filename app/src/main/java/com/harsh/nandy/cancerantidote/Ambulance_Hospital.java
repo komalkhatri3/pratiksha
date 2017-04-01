@@ -34,8 +34,8 @@ public class Ambulance_Hospital extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Object selectedState = parent.getItemAtPosition(position);
-                if(selectedState=="Assam")
+                String selectedState = parent.getItemAtPosition(position).toString();
+                if(selectedState.equals("Assam"))
                 {
                     TextView name,available;
                     name= (TextView) findViewById(R.id.Hospital_name);
