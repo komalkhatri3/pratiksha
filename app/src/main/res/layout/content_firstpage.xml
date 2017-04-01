@@ -39,7 +39,7 @@
 
     <Button
         android:id="@+id/button_login_signup"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:onClick="change_activity"
@@ -54,7 +54,7 @@
 
     <Button
         android:id="@+id/button_list_of_hospitals"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="@color/colorAccent"
         android:onClick="change_activity"

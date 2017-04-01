@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Ambulance_Hospital extends AppCompatActivity implements DialogInterface.OnDismissListener{
 
@@ -112,27 +111,7 @@ public class Ambulance_Hospital extends AppCompatActivity implements DialogInter
             }
         });
 
-        findViewById(R.id.button_insert_fake_data).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                findViewById(R.id.button_insert_fake_data_ambulance).setVisibility(View.VISIBLE);
-                dbHandler.open();
-                long i = dbHandler.insertHospitalData(random("string"), random("string"),
-                        random("string"), random("number"), random("number"));
-                System.out.println(i);
-                dbHandler.close();
-            }
-        });
 
-        findViewById(R.id.button_insert_fake_data_ambulance).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dbHandler.open();
-                long i = dbHandler.insertAmbulanceData(random("array"), random("string"));
-                System.out.println(i);
-                dbHandler.close();
-            }
-        });
     }
 
     public String isAvailable(List<Ambulance> ambulanceList, int index){
@@ -141,34 +120,7 @@ public class Ambulance_Hospital extends AppCompatActivity implements DialogInter
         } else return  "no";
     }
 
-    public String random(String what){
-        Random generator = new Random();
-        StringBuilder randomStringBuilder = new StringBuilder();
-        int randomLength = generator.nextInt(10);
-        switch (what){
-            case "string":
-                String alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                char tempChar;
-                for (int i = 0; i < randomLength; i++){
-                    tempChar = alphabets.charAt(generator.nextInt(alphabets.length()));
-                    randomStringBuilder.append(tempChar);
-                }
-                return String.valueOf(randomStringBuilder);
-            case "number":
-                String numbers = "0123456789";
-                int tempInt;
-                for (int i = 0; i < randomLength; i++){
-                    tempInt = numbers.charAt(generator.nextInt(numbers.length()));
-                    randomStringBuilder.append(tempInt);
-                }
-                return String.valueOf(randomStringBuilder);
-            case "array":
-                String [] array = new String[]{"Arunachal Pradesh", "Assam", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Sikkim", "Tripura"};
-                return array[new Random().nextInt(array.length)];
-            default:
-                return null;
-        }
-    }
+
 
     @Override
     public void onBackPressed() {

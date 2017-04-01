@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:layout_below="@+id/spinner"
-        android:id="@+id/button_insert_fake_data"
+        android:id=""
         android:layout_marginTop="200dp"/>
 
     <Button
