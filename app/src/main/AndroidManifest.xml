@@ -19,6 +19,7 @@
         android:maxSdkVersion="22" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
@@ -32,17 +33,18 @@
             android:name=".FirstPage"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".login"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".Listofhospitals"
             android:label="@string/title_activity_listofhospitals"
@@ -54,9 +56,9 @@
         <activity
             android:name=".Otherservices"
             android:label="@string/title_activity_otherservices"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" /><![CDATA[
         android:theme="@style/AppTheme.NoActionBar" />
-        <!--
+        ]]><!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
              Note that the API key is linked to the encryption key used to sign the APK.
@@ -72,15 +74,8 @@
             android:name=".Ambulance_Hospital"
             android:label="@string/title_activity_ambulance__hospital"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AmbulanceServicesMap" />
-        <activity
-            android:name=".WhatIsCancer"
-            android:label="@string/title_activity_what_is_cancer"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".CancerSymptoms"
-            android:label="@string/title_activity_cancer_symptoms"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:name=".AmbulanceServicesMap"/>
     </application>
 
 </manifest>
