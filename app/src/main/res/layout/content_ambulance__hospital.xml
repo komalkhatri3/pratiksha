@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="@mipmap/ic_launcher"
     android:padding="@dimen/activity_horizontal_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.harsh.nandy.cancerantidote.Ambulance_Hospital"
@@ -12,42 +12,42 @@
 
     <TextView
         android:id="@+id/textView"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:padding="@dimen/activity_horizontal_margin"
         android:text="@string/choose_your_state"
         android:textSize="20sp" />
 
     <Spinner
         android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:background="@android:color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="@dimen/activity_vertical_margin"
+        android:entries="@array/state_name"
         android:paddingEnd="@dimen/activity_vertical_margin"
-        android:entries="@array/state_name"/>
+        android:paddingStart="@dimen/activity_vertical_margin" />
 
     <Button
-        android:text="@string/insert_fake_data_in_hospital_table"
+        android:id="@+id/button_insert_fake_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAllCaps="false"
         android:layout_below="@+id/spinner"
-        android:id="@+id/button_insert_fake_data"
-        android:layout_marginTop="200dp"/>
+        android:layout_marginTop="200dp"
+        android:text="@string/insert_fake_data_in_hospital_table"
+        android:textAllCaps="false" />
 
     <Button
-        android:text="@string/insert_fake_data_in_ambulance_table"
+        android:id="@+id/button_insert_fake_data_ambulance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/button_insert_fake_data"
-        android:textAllCaps="false"
-        android:id="@+id/button_insert_fake_data_ambulance"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="@string/insert_fake_data_in_ambulance_table"
+        android:textAllCaps="false" />
 
-<!--
+    <!--
     <FrameLayout
         android:id="@+id/ambulance_list_fragment_container"
         android:layout_width="match_parent"
