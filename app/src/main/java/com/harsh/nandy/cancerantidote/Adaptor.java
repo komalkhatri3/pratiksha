@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -19,9 +18,13 @@ public class Adaptor {
     public List<Ambulance> AmbulanceAvail;
 
 
-    public Adaptor(AdapterView.OnItemSelectedListener context, List<Ambulance> AmbulanceAvail) {
-        this.context = (Context) context;
+    public Adaptor(Context context, List<Ambulance> AmbulanceAvail) {
+        this.context= context;
         this.AmbulanceAvail = AmbulanceAvail;
+    }
+
+    public Adaptor(AdapterView.OnItemSelectedListener onItemSelectedListener, List<Ambulance> ambulanceList) {
+
     }
 
     public int getCount() {
@@ -36,7 +39,6 @@ public class Adaptor {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view=layoutInflater.inflate(R.layout.list_eleme,null);
         TextView name=(TextView) view.findViewById(R.id.name);
-        Button button=(Button) view.findViewById(R.id.Book_ambulance);
         Ambulance ambulance =AmbulanceAvail.get(position);
         name.setText(ambulance.getHospital());
         return view;

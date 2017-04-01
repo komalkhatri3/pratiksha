@@ -52,6 +52,7 @@ public class Listofhospitals extends AppCompatActivity {
             ft.replace(R.id.fa, fragment);
             ft.commit();
         }
+
      btn1=(Button) findViewById(R.id.button7);
         btn1.setVisibility(btn1.GONE);
 
@@ -71,5 +72,6 @@ public class Listofhospitals extends AppCompatActivity {
 
 
     }
+
 
 }

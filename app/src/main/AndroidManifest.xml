@@ -96,6 +96,10 @@
         <activity
             android:name=".PatientRecord"
             android:label="@string/title_activity_patient_record"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Splash"
+            android:label="@string/title_activity_splash"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
