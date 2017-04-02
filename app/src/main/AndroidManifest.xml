@@ -103,7 +103,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HospitalArea" />
         <activity android:name=".HospitalSpecialization" />
-        <activity android:name=".HospitalUser"></activity>
+        <activity android:name=".HospitalUser" />
+        <activity
+            android:name=".nearbyhospitals"
+            android:label="@string/title_activity_nearbyhospitals"></activity>
     </application>
 
 </manifest>

@@ -62,6 +62,8 @@ public class DatabaseHolder {
         dbHelper.close();
     }
 
+
+
     public long insertPatientData(String aadhar, String name, String contact, String email,
                                   String gender, String age, String disease, String doctorID,
                                   String nextAppointment, String hospitalID, String address) {

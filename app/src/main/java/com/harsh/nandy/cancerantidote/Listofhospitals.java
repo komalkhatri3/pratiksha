@@ -55,6 +55,11 @@ public class Listofhospitals extends AppCompatActivity {
             ft.replace(R.id.fa, fragment);
             ft.commit();*/
         }
+        if(view==findViewById(R.id.button12))
+        {
+            Intent i=new Intent(Listofhospitals.this,nearbyhospitals.class);
+            startActivity(i);
+        }
 
      /*btn1=(Button) findViewById(R.id.button7);
         btn1.setVisibility(btn1.GONE);
