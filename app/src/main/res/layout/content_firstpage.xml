@@ -13,7 +13,7 @@
         android:id="@+id/button_what_is_cancer"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:background="@drawable/mybuttonlarge"
+
         android:onClick="change_activity"
         android:text="@string/what_is_cancer"
         android:textColor="#FFFFFF"
