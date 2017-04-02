@@ -62,6 +62,8 @@ public class DatabaseHolder {
         dbHelper.close();
     }
 
+
+
     public long insertPatientData(String aadhar, String name, String contact, String email,
                                   String gender, String age, String disease, String doctorID,
                                   String nextAppointment, String hospitalID, String address) {
@@ -214,7 +216,36 @@ public class DatabaseHolder {
         }
         return cursor;
     }
-
+    public Cursor getListarea(String state)
+    {
+        Cursor cursor=null;
+        try {
+            cursor=db.query(true,hospital_tableName,new String[]{"hospital"},"state='"+ state +"'",null,null,null,null,null);
+        }
+        catch (SQLiteException e){
+            if (e.getMessage().contains("no such table")){
+                Toast.makeText(context, "ERROR: Table doesn't exist!", Toast.LENGTH_SHORT).show();
+                // create table
+                // re-run query, etc.
+            } else e.printStackTrace();
+        }
+        return cursor;
+    }
+    public Cursor getListspecialization(String specialization)
+    {
+        Cursor cursor=null;
+        try {
+            cursor=db.query(true,hospital_tableName,new String[]{"hospital"},"specialization='"+ specialization +"'",null,null,null,null,null);
+        }
+        catch (SQLiteException e){
+            if (e.getMessage().contains("no such table")){
+                Toast.makeText(context, "ERROR: Table doesn't exist!", Toast.LENGTH_SHORT).show();
+                // create table
+                // re-run query, etc.
+            } else e.printStackTrace();
+        }
+        return cursor;
+    }
 
 
     public void resetTables(){
@@ -261,6 +292,11 @@ public class DatabaseHolder {
             db.execSQL("DROP TABLE IF EXISTS Nurse");
             db.execSQL("DROP TABLE IF EXISTS Patient");
             onCreate(db);
+            if(newVersion>oldVersion)
+            {
+                db.execSQL("ALTER TABLE Hospital ADD COLUMN state TEXT");
+                db.execSQL("ALTER TABLE Hospital ADD COLUMN specialization TEXT");
+            }
         }
     }
 }
