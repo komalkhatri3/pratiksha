@@ -1,5 +1,6 @@
 package com.harsh.nandy.cancerantidote;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +10,9 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class login extends AppCompatActivity implements SignUpFragment.OnSignUpFragmentInteractionListener {
 
@@ -37,8 +41,50 @@ public class login extends AppCompatActivity implements SignUpFragment.OnSignUpF
     }
     public void LogIn(View view)
     {
-        Intent intent =new Intent(login.this,FirstPage.class);
-        startActivity(intent);
+        EditText username= (EditText) findViewById(R.id.editText);
+        EditText password=(EditText) findViewById(R.id.editText2);
+        if(username.getText().toString().equals("Ram")){
+            if(password.getText().toString().equals("1234"))
+            {
+                Intent intent =new Intent(login.this,FirstPage.class);
+                startActivity(intent);
+            }
+        }
+        else if(username.getText().toString().equals("Sarthak")){
+            if(password.getText().toString().equals("1234"))
+            {
+                Intent intent =new Intent(login.this,FirstPage.class);
+                startActivity(intent);
+            }
+        }
+        else if(username.getText().toString().equals("Tanvi")){
+            if(password.getText().toString().equals("1234"))
+            {
+                Intent intent =new Intent(login.this,FirstPage.class);
+                startActivity(intent);
+            }
+        }
+
+        else if(username.getText().toString().equals("Pratiksha")){
+            if(password.getText().toString().equals("1234"))
+            {
+                Intent intent =new Intent(login.this,FirstPage.class);
+                startActivity(intent);
+            }
+        }
+        else if(username.getText().toString().equals("Komal")){
+            if(password.getText().toString().equals("1234"))
+            {
+                Intent intent =new Intent(login.this,FirstPage.class);
+                startActivity(intent);
+            }
+        }
+        else
+        {
+            Context context=getApplicationContext();
+            Toast.makeText(context,"invalid username or id",Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override
