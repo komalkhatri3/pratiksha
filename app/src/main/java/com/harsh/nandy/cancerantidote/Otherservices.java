@@ -25,7 +25,7 @@ public void onClick(View v) {
 
     if (v == findViewById(R.id.button_video_calling)) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        Uri.parse("http://www.skype.com");
+        Uri.parse("http://www.skype.com");;
         startActivity(intent);
     }
     if (v == findViewById(R.id.button_counselling_service)) {
