@@ -6,16 +6,365 @@
     android:layout_height="match_parent"
     tools:context="com.harsh.nandy.cancerantidote.HospitalUser">
 
-    <ListView
-        android:id="@+id/listuser"
-        android:layout_width="304dp"
-        android:layout_height="493dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="204dp"
+        android:layout_height="37dp"
+        android:text="Civil Hospital"
+
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="273dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="9dp"
+        android:text="3.4"
+
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="273dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteY="277dp"
+        android:layout_marginRight="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView58"
+        android:layout_width="204dp"
+        android:layout_height="37dp"
+        android:text="Shija Hospital"
+        android:textAppearance="@android:style/TextAppearance.Holo.Light.Widget"
+
+
+        tools:layout_editor_absoluteX="-4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="12dp"
+        android:text="3.6"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59000003" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintVertical_bias="0.498"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="204dp"
+        android:layout_height="37dp"
+        android:text="Dr. B. Boorah Institute"
+
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="117dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:text="3.9"
+
+        tools:layout_editor_absoluteY="116dp"
+        tools:layout_editor_absoluteX="203dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteY="124dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="204dp"
+        android:layout_height="37dp"
+        android:text="Cachar Cancer Center"
+
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="156dp"
+
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="9dp"
+        android:text="3.9"
+
+
+
+        tools:layout_editor_absoluteY="156dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteY="156dp"
+        android:layout_marginRight="16dp"
+
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteY="196dp"
+        android:layout_marginRight="16dp"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="200dp"
+        android:layout_height="28dp"
+        android:text="Hospital name"
+
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="2dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="114dp"
+        android:layout_height="32dp"
+        android:text="user rating"
+
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="2dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/h_name2"
+        android:layout_width="204dp"
+        android:layout_height="37dp"
+        android:text="STNM Hospital"
+
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="196dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="204dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="71dp"
+        android:text="North East Cancer Centre"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:text="5"
+
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="34dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteY="34dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/rate1"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="9dp"
+        android:text="3.9"
+
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="196dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:text="4.1"
+        android:textAppearance="@android:style/TextAppearance.Material.DialogWindowTitle"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="76dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteY="85dp"
+        android:layout_marginRight="16dp"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"/>
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="204dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="0dp"
+        android:text="Heema Hospital"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="34dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.079"/>
 </android.support.constraint.ConstraintLayout>

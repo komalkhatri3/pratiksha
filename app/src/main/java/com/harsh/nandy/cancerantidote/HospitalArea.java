@@ -23,68 +23,102 @@ public class HospitalArea extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedState = parent.getItemAtPosition(position).toString();
                 if (selectedState.equals("Assam")) {
-                    TextView name, available;
+                    TextView name, available,address;
                     name = (TextView) findViewById(R.id.textView19);
+
                     String Name = "Dr. B. Borooach cancer instittute";
                     name.setText(Name);
 
                     name.setVisibility(View.VISIBLE);
+                    address=(TextView) findViewById(R.id.textView4);
+                    String Address="";
+                    address.setText(Address);
+                    address.setVisibility(View.VISIBLE);
+
                 }
                 if (selectedState.equals("Arunachal Pradesh")) {
-                    TextView name, available;
+                    TextView name, available,address;
                     name = (TextView) findViewById(R.id.textView19);
                     String Name = "Heema Hospital";
                     name.setText(Name);
 
                     name.setVisibility(View.VISIBLE);
+                    address=(TextView) findViewById(R.id.textView4);
+                    String Address="";
+                    address.setText(Address);
+                    address.setVisibility(View.VISIBLE);
                 }
                 if (selectedState.equals("Manipur")) {
-                    TextView name, available;
+                    TextView name, available,address;
                     name = (TextView) findViewById(R.id.textView19);
                     String Name = "Shija Hospitals and Research Center";
                     name.setText(Name);
 
                     name.setVisibility(View.VISIBLE);
+                    address=(TextView) findViewById(R.id.textView4);
+                    String Address="";
+                    address.setText(Address);
+                    address.setVisibility(View.VISIBLE);
                 }
                 if (selectedState.equals("Meghalaya")) {
-                    TextView name, available;
+                    TextView name, available,address;
                     name = (TextView) findViewById(R.id.textView19);
                     String Name = "Civil Hospital";
                     name.setText(Name);
 
                     name.setVisibility(View.VISIBLE);
+                    address=(TextView) findViewById(R.id.textView4);
+                    String Address="";
+                    address.setText(Address);
+                    address.setVisibility(View.VISIBLE);
                 }
                 if (selectedState.equals("Mizoram")) {
-                    TextView name, available;
+                    TextView name, available,address;
                     name = (TextView) findViewById(R.id.textView19);
                     String Name = "Regional Cancer Hospital";
                     name.setText(Name);
 
                     name.setVisibility(View.VISIBLE);
+                    address=(TextView) findViewById(R.id.textView4);
+                    String Address="";
+                    address.setText(Address);
+                    address.setVisibility(View.VISIBLE);
                 }
                 if (selectedState.equals("Nagaland")) {
-                    TextView name, available;
+                    TextView name, available,address;
                     name = (TextView) findViewById(R.id.textView19);
                     String Name = "Eden Medical Centre";
                     name.setText(Name);
 
                     name.setVisibility(View.VISIBLE);
+                    address=(TextView) findViewById(R.id.textView4);
+                    String Address="";
+                    address.setText(Address);
+                    address.setVisibility(View.VISIBLE);
                 }
                 if (selectedState.equals("Sikkim")) {
-                    TextView name, available;
+                    TextView name, available,address;
                     name = (TextView) findViewById(R.id.textView19);
                     String Name = "STNM Hospital";
                     name.setText(Name);
 
                     name.setVisibility(View.VISIBLE);
+                    address=(TextView) findViewById(R.id.textView4);
+                    String Address="";
+                    address.setText(Address);
+                    address.setVisibility(View.VISIBLE);
                 }
                 if (selectedState.equals("Tripura")) {
-                    TextView name, available;
+                    TextView name, available,address;
                     name = (TextView) findViewById(R.id.textView19);
                     String Name = "Agartalla Gov. Cancer hospital";
                     name.setText(Name);
 
                     name.setVisibility(View.VISIBLE);
+                    address=(TextView) findViewById(R.id.textView4);
+                    String Address="";
+                    address.setText(Address);
+                    address.setVisibility(View.VISIBLE);
                 }
             }
 

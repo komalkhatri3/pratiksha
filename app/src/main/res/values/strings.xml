@@ -60,6 +60,7 @@
         <item>lymphoma</item>
         <item>kidney cancer</item>
         <item>leukemia</item>
+        <item>blood cancer</item>
     </string-array>
     <string name="title_activity_what_is_cancer">WhatIsCancer</string>
     <string name="title_activity_cancer_symptoms">CancerSymptoms</string>
