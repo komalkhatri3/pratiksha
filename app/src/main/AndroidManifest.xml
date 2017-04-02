@@ -23,6 +23,7 @@
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
+        android:icon=""
         android:label="cancerAntidote"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -35,14 +36,7 @@
         <activity
             android:name=".login"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Listofhospitals"
             android:label="@string/title_activity_listofhospitals"
@@ -99,14 +93,29 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Splash"
-            android:label="@string/title_activity_splash"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="CancerAntidote"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".HospitalArea" />
         <activity android:name=".HospitalSpecialization" />
         <activity android:name=".HospitalUser" />
         <activity
             android:name=".nearbyhospitals"
-            android:label="@string/title_activity_nearbyhospitals"></activity>
+            android:label="@string/title_activity_nearbyhospitals" />
+        <activity
+            android:name=".Ngo"
+            android:label="@string/title_activity_ngo"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Form"
+            android:label="@string/title_activity_form"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

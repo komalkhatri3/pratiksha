@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/virus"
-    android:backgroundTint="@drawable/chotasa"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.harsh.nandy.cancerantidote.Otherservices"
-    tools:showIn="@layout/activity_otherservices">
+    tools:context="com.harsh.nandy.cancerantidote.Form"
+    tools:showIn="@layout/activity_form">
 
 </android.support.constraint.ConstraintLayout>

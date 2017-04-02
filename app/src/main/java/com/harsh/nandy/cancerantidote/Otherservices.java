@@ -9,6 +9,8 @@ import android.view.View;
 
 public class Otherservices extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,13 +34,18 @@ public void onClick(View v) {
         Intent intent = new Intent(Otherservices.this, Counselling.class);
         startActivity(intent);
     }
-      /* if(v==findViewById(R.id.button_ivr)) {
+       if(v==findViewById(R.id.button_ivr)) {
             Intent i = new Intent(Otherservices.this, Ivr.class);
             startActivity(i);
         }
     if(v==findViewById(R.id.button_vns)) {
         Intent i=new Intent(Otherservices.this,Vns.class);
         startActivity(i);
-    }*/
+    }
+    if(v==findViewById(R.id.button_vns)) {
+        Intent i=new Intent(Otherservices.this,Vns.class);
+        startActivity(i);
+    }
+
 
 }}

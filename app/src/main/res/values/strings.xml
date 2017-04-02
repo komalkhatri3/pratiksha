@@ -71,4 +71,6 @@
     <string name="title_activity_patient_record">PatientRecord</string>
     <string name="title_activity_splash">Splash</string>
     <string name="title_activity_nearbyhospitals">Map</string>
+    <string name="title_activity_ngo">Ngo</string>
+    <string name="title_activity_form">Form</string>
 </resources>
