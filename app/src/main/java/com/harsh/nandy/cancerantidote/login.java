@@ -76,7 +76,7 @@ public class login extends AppCompatActivity implements SignUpFragment.OnSignUpF
             if(password.getText().toString().equals("1234"))
             {
                 Intent intent =new Intent(login.this,FirstPage.class);
-                startActivity(intent);
+                startActivity(intent);;
             }
         }
         else
